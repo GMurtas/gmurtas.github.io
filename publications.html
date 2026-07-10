@@ -1,7 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;               /* Space between links */
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation links */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease,
+                        color 0.2s ease;
+        }
+
+        /* Hover effect */
+        nav a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+
+        /* Highlight the current page */
+        nav a.active {
+            background-color: #16a085;
+            font-weight: 600;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 16px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        nav button:hover,
+        nav button.active {
+            background: #1abc9c;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+
+        .tabcontent.active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 0.3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="publications.html" class="active">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+</nav>
 
 <body>
+
+
 <main>
 
 <section id="publications" class="tabcontent active">
@@ -14,31 +129,34 @@
             Murtas G., Boeva V., Tsiporkova E.<br>
             Neurosymbolic Artificial Intelligence Journal, 2026.
         </p>
-        <a href="#">PDF</a>
+        <a href="#">WAITING FOR PUBLICATION</a>
     </div>
 
     <div class="card">
-        <h3>"An evidence-based neuro-symbolic framework for ambiguous
-            image scene classification."</h3>
+        <h3>An evidence-based neuro-symbolic framework for ambiguous
+            image scene classification.</h3>
         <p>
             Murtas G., Boeva V., Tsiporkova E.<br>
             19th Inter- national Conference on Neurosymbolic Learning and Reasoning, 2025.
         </p>
-        <a href="https://openreview.net/pdf?id=6UnuZcQ2zY">PDF</a>
+        <a href="https://openreview.net/pdf?id=6UnuZcQ2zY">LINK</a>
     </div>
 
     <div class="card">
-        <h3>"“Data-driven estimation of blade icing risk in wind turbines.”</h3>
+        <h3>Data-driven estimation of blade icing risk in wind turbines.</h3>
         <p>
             Murtas G., Cabral H., Tsiporkova E.<br>
             2023 IEEE International Conference on Prognostics and
             Health Management (ICPHM). IEEE, 2023.
         </p>
-        <a href="#">PDF</a>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10194052">LINK</a>
     </div>
 
 </section>
 
 </main>
+
+</script>
+
 </body>
 </html>
