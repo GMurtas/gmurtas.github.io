@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
 
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+         nav {
+            background-color: #2c3e50;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;               /* Space between links */
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation links */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease,
+                        color 0.2s ease;
+        }
+
+        /* Hover effect */
+        nav a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+
+        /* Highlight the current page */
+        nav a.active {
+            background-color: #16a085;
+            font-weight: 600;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 16px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        nav button:hover,
+        nav button.active {
+            background: #1abc9c;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+
+        .tabcontent.active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 0.3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="blog.html">Blog</a>
+</nav>
+
+<body>
+
+<main>
+
+<section id="projects" class="tabcontent active">
+
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Vehicle failure prediction</h3>
+        <p>Neuro-symbolic AI | Evidence Theory | Prognostic Health Management</p>
+
+        <p>
+            Streamlit application using OpenCV and deep learning
+            to recognize handwritten mathematical expressions (2026).
+        </p>
+
+        <a href="#">Publication</a>
+        <a href="#">Talk</a>
+
+    </div>
+
+    <div class="card">
+        <h3>Abandoned object detection</h3>
+        <p>Neuro-symbolic AI | Computer Vision | Evidence Theory</p>
+        <p>Interpretable framework integrating deep learning, modal logic, and evidence theory, to deal with uncertainty in real-world data and detect abandoned luggages in public settings.(2025).</p>
+        <a href="https://openreview.net/pdf?id=6UnuZcQ2zY">Publication</a>
+        <a href="#">Talk</a>
+
+    </div>
+
+    <div class="card">
+        <h3>Embedded AI: object detection with active learning </h3>
+        <p>Computer Vision | Active learning | Self-supervised learning | Embedded AI</p>
+        <p>Light-weight solution improving the performance of object detection models through active learning and self-supervised learning. (2025).</p>
+        <a href="https://www.sirris.be/en/inspiration/embedded-ai-detecting-abandoned-objects-public-spaces">Article</a>
+
+    </div>
+
+        <div class="card">
+        <h3>Supply chain optimization </h3>
+        <p>Forecasting | Time series | Federated learning </p>
+        <p>Time series forecasting for outbound volume prediction and and stock management optimization (2024).</p>
+        <a href="https://www.sirris.be/en/inspiration/zee-project-building-trustworthy-ai-supply-chain">Article</a>
+
+    </div>
+
+    <div class="card">
+        <h3>Blade icing prediction </h3>
+        <p>Forecasting | Time series | Renewable energy | Prognostic Health Management</p>
+        <p>Novel data-driven approach to estimate risk of icing on the blades of wind turbines (2023).</p>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10194052">Publication</a>
+
+    </div>
+
+    <div class="card">
+        <h3>Data-driven product monitoring and optimization</h3>
+        <p>Root-cause analysis | Profiling | Context-aware failure detection </p>
+        <p>Device and context profiling, root-cause analysis for failures during the testing process of newly produced devices (2022).</p>
+
+    </div>
+
+    <div class="card">
+        <h3>Matchmaking of expert profiles for creativity boosting</h3>
+        <p>Matchmaking | NLP | Pattern mining </p>
+        <p>Boosting creativity by matching expert profiles to suggest team composition and tool sets for cocreation sessions (2022).</p>
+        <a href="https://www.sirris.be/en/inspiration/vo-group-developing-platform-form-creative-teams">Article</a>
+    </div>
+
+</section>
+
+</main>
+
+</script>
+
+</body>
+</html>
