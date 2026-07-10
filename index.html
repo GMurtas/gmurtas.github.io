@@ -21,9 +21,37 @@
         }
 
         nav {
+            background-color: #2c3e50;
+            padding: 0.75rem 2rem;
             display: flex;
             justify-content: center;
-            background: #34495e;
+            gap: 2rem;               /* Space between links */
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation links */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease,
+                        color 0.2s ease;
+        }
+
+        /* Hover effect */
+        nav a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+
+        /* Highlight the current page */
+        nav a.active {
+            background-color: #16a085;
+            font-weight: 600;
         }
 
         nav button {
@@ -55,26 +83,23 @@
             display: block;
         }
 
-        h2 {
-            border-bottom: 2px solid #1abc9c;
-            padding-bottom: 0.3rem;
+        .bio {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
         }
 
-        .card {
-            background: white;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        .bio h1 {
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            color: #2c3e50;
         }
 
-        a {
-            color: #1abc9c;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        .bio p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
         }
 
     </style>
@@ -88,117 +113,22 @@
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="publications.html">Publications</a>
     <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
     <a href="blog.html">Blog</a>
 </nav>
 
 <main>
 
-<section id="publications" class="tabcontent active">
-    <h2>Publications</h2>
+<section class="bio">
+    <h1>Hi, I'm Giulia</h1>
 
-        <div class="card">
-        <h3>Neuro-LENS: a neuro-symbolic framework integrating incomplete background
-            knowledge and deep learning</h3>
-        <p>
-            Murtas G., Boeva V., Tsiporkova E.<br>
-            Neurosymbolic Artificial Intelligence Journal, 2026.
-        </p>
-        <a href="#">PDF</a>
-    </div>
-
-    <div class="card">
-        <h3>"An evidence-based neuro-symbolic framework for ambiguous
-            image scene classification."</h3>
-        <p>
-            Murtas G., Boeva V., Tsiporkova E.<br>
-            19th Inter- national Conference on Neurosymbolic Learning and Reasoning, 2025.
-        </p>
-        <a href="https://openreview.net/pdf?id=6UnuZcQ2zY">PDF</a>
-    </div>
-
-    <div class="card">
-        <h3>"“Data-driven estimation of blade icing risk in wind turbines.”</h3>
-        <p>
-            Murtas G., Cabral H., Tsiporkova E.<br>
-            2023 IEEE International Conference on Prognostics and
-            Health Management (ICPHM). IEEE, 2023.
-        </p>
-        <a href="#">PDF</a>
-    </div>
-
+    <p>
+        I am a researcher and AI expert interested in neuro-symbolic AI,
+        explainable AI, sustainability, and AI applied to industry. This website showcases
+        my projects, publications, and technical blog posts.
+    </p>
 </section>
-
-<section id="projects" class="tabcontent">
-
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Handwritten Math Solver</h3>
-
-        <p>
-            Streamlit application using OpenCV and deep learning
-            to recognize handwritten mathematical expressions.
-        </p>
-
-        <a href="#">GitHub Repository</a>
-
-    </div>
-
-    <div class="card">
-        <h3>Another Project</h3>
-
-        <p>Description...</p>
-
-    </div>
-
-</section>
-
-<section id="blog" class="tabcontent">
-
-    <h2>Blog</h2>
-
-    <div class="card">
-        <h3>Building a CNN for Handwritten Symbols</h3>
-
-        <p>
-            Notes on creating a lightweight classifier using PyTorch.
-        </p>
-
-        <a href="#">Read more</a>
-
-    </div>
-
-</section>
-
-</main>
-
-<script>
-
-function openTab(tabName, element) {
-
-    // Hide all sections
-    let tabs = document.getElementsByClassName("tabcontent");
-
-    for (let tab of tabs) {
-        tab.classList.remove("active");
-    }
-
-    // Remove active button
-    let buttons = document.getElementsByClassName("tablink");
-
-    for (let button of buttons) {
-        button.classList.remove("active");
-    }
-
-    // Show selected tab
-    document.getElementById(tabName).classList.add("active");
-
-    element.classList.add("active");
-}
-
-</script>
 
 </body>
 </html>
