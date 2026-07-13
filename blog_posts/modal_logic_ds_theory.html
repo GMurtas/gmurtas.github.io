@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
 
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 0.3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .info {width:780px;}
+        .info img {float:right;}
+        .info p {margin-right:100px;}
+
+    </style>
+</head>
+
+<body>
+
+<main>
+    <h2>An introduction to Modal logic and Dempster-Shafer theory</h2>
+
+<section id="blog" class="tabcontent">
+
+
+    <div class="card">
+
+        Both modal logic and Dempster-Shafer theory can be applied to deal with uncertainty. They were developed in the 1970s and 1980s,
+        and they are now being rediscovered as ways of modeling uncertain situations and ignorance in the data. Below, you can read an introduction to the main concepts
+        the two frameworks are based on. 
+
+        <!-- <h3>An introduction to Modal logic and Dempster-Shafer theory</h3> -->
+        <h3>Modal logic</h3>
+        <p>
+            Modal logic is an extension of classical propositional logic. New operators,
+            called <i>modal operators</i>, are introduced to reason about statements whose truth
+            may depend on the specific context they are in, or on their interpretation, rather than
+            being universally true or false: the <i>necessity</i>(□) and the <i>possibility</i> (◊) operators.
+            Thus, instead of being simply True or False, in modal logic a fact can also be Possibly True or False or
+            Necessarily True or False.
+        </p>
+
+       
+        <div class="info">
+            <img src="../figures/possible_worlds.png" alt="modal logic worlds" width="250" height="200"/>
+             <p>
+            Modal logic concepts are defined on a set of possible worlds connected by accessibility relations (Kripke
+            structures). A world is meant to signify a scenario or state of affairs, where all the accessible worlds are
+            visible from a considered world; a proposition can hold in some of these worlds but not in others.
+        </p>
+        </div>
+
+        <p>
+            Given a set of possible worlds, necessity and possibility can be defined as such:
+            <ul>
+                <li>A proposition <i>p</i> is <b>necessary</b> if it holds in all worlds accessible from the current one</li>
+                <li>A proposition <i>p</i> is <b>possible</b> if it holds in at least one accessible world</li>
+            </ul>
+        </p>
+
+        <p>
+          These operators provide a way to express partial knowledge and contextual reasoning,
+          making modal logic suitable for modeling high-level semantic concepts from uncertain or
+          incomplete observations, and for usage on real-world applications, where semantic ambiguity is often
+          inherent, and having noise and uncertainty in the data is the norm. 
+        </p>
+
+        <h3>Dempster-Shafer theory</h3>
+        <p>
+            Dempster-Shafer theory (DST), also known as evidence theory, is a mathematical framework for reasoning under uncertainty that
+            generalizes classical probability theory. In probability theory, a function assigns a probability mass to a single hypothesis; in DST, a multi-valued mapping, going from a set of evidence to a set of hypotheses called the <i>frame of discernment</i> Ω, assigns <i>basic belief masses</i> to arbitrary subsets of hypotheses,
+            allowing to model an uncertain scenario where the available information is sufficient to individuate a subset of hypothes, but insufficient to discriminate among them.
+        </p>
+        <img src="../figures/multi_valued_map.png" alt="D-S theory mapping" width="400" height="180">
+
+        <p>
+            In a scenario where only two hypotheses A and B are possible, but not enough information is available to discriminate within the two, classical probability theory may assign the same probability
+            mass to both A and B, i.e., P(A)=0.5 and P(B)=0.5, not allowing to distinguish between the two hypotheses being equally likely or simply the lack of information leading to prefer one over the other.
+            In DST, ignorance can be explicitly represented by assigning all the belief mass to the whole frame of descernment (in this case, containing A and B), to indicate that only the statement "one of the
+            hypothese is true" can be supported by the available evidence, without committing to either A or B.
+        </p>
+
+        <p>
+            Given a basic belief assignment <i>m</i> (a multi-valued mapping from the evidence set to the frame of discernment) two complementary
+            measures can be derived: <b>belief</b> and <b>plausibility</b>. 
+            The belief of a hypothesis B, <i>Bel(B)</i>, represents the minimum amount of evidence support that can unequivocally be committed to A, obtained
+            by summing the masses of all subsets entirely contained in B (as the example in the figure below, on the right). The plausibility of B, <i>Pl(B)</i>, measures the maximum
+            amount of evidence support that is not incompatible with B, obtained by summing the masses of all subsets having a non-empty intersection with B
+            (on the left in the figure below). 
+        </p>
+        <img src="../figures/plausibility_belief.png" alt="D-S theory mapping" width="600" height="155">
+
+        <p>
+            Belief and plausibility define an interval [<i>Bel(B)</i>, <i>Pl(B)</i>], within which the true probability of B is expected to lie.
+            The width of the interval quantifies the amount of residual uncertainty: a wider interval indicates more ignorance and the need for
+            additional evidence.
+        </p>
+
+
+        <h3>Bridging modal logic and Dempster-Shafer theory</h3>
+        <p>
+            A bridge between modal logic and DST can be built by defining plausibility and belief from DST in terms of the possibility and necessity operators from modal logic,
+            allowing to leverage the strengths of both frameworks.
+        </p>
+
+        <p>To know more on how I applied modal logic and evidence theory to deal with uncertainty in real-life use cases, you can read my latest <a href="../publications.html">publications</a>
+            or read a summary in <a href="../projects.html">projects</a>.</p>
+
+
+
+        
+        <b>References</b>
+        <p>
+            Shafer, G. (1976). A Mathematical Theory of Evidence. Princeton University Press.
+        </p>
+
+        <p>
+            B. Chellas. “Modal Logic, an Introduction”. In: Cambridge University Press, Cambridge, 1980
+        </p>
+
+        <p>
+            E. Tsiporkova, V. Boeva, and B. De Baets. “Dempster–Shafer theory framed in modal logic”. In: International journal of approximate reasoning 21.2 (1999), pp. 157–175.
+        </p>
+        
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+</script>
+
+</body>
+</html>
