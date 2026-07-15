@@ -105,7 +105,9 @@
             text-decoration: underline;
         }
 
-        .info {width:700px;}
+        .info {max-width: 100%;
+                height: auto;
+                display: block;}
         .info img {float:right;}
         .info p {margin-right:250px;}
 
@@ -136,6 +138,11 @@
 
         .read-more p {
             margin-top: 1rem;
+        }
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -186,7 +193,9 @@
                     component, together with the time series data; in the parallel neural-symbolic integration, the outputs of both components are
                     combined by a rule-based model.
 
-                    <img src="figures/vehicle_failure_workflow.png" alt="symbolic and neural component integration in SCANIA use case" width="500" height="200">
+                    <div class="project-image">
+                        <img src="figures/vehicle_failure_workflow.png" alt="symbolic and neural component integration in SCANIA use case">
+                    </div>
                 <p>
                     The integration of symbolic reasoning and deep learning models allowed to outperform purely
                     deep learning-based solution on the benchmark dataset.
@@ -224,7 +233,9 @@
             <p>
                 The full workflow can be seen below.
             </p>
-            <img src="figures/abandoned_object_workflow.png" alt="symbolic and neural component integration in abandoned object detection use case" width="500" height="200">
+            <div class="project-image">
+                <img src="figures/abandoned_object_workflow.png" alt="symbolic and neural component integration in abandoned object detection use case">
+            </div>
 
             <p>
             The usage  of modal logic and Dempster-Shafer theory to deal with ambiguous situations allows to avoid misclassifications,
@@ -264,8 +275,9 @@
 
             </p>
 
-            <img src="figures/reconnaissance_workflow.png" alt="self-supervised and active learning workflow" width="500" height="200">
-
+            <div class="project-image">
+                <img src="figures/reconnaissance_workflow.png" alt="self-supervised and active learning workflow">
+            </div>
             <p>The solution was packaged in Docker components and optimized to run on a NVIDIA Jetson Orin platform.</p>
         </details>
     </div>
